@@ -1,4 +1,45 @@
 # 이원도 202230226
+## 9월 4일
+
+### 바벨과 웹팩 설정 커스터마이징
+- 바벨이나 웹팩의 설정도 커스터마이징 할 수 있습니다.
+- 바벨은 자바스크립트 트랜스컴파일러이며, 최신 자바스크립트 코드를 하위 호환성을 보장하는 스크립트 코드로 변환하는 일을 담당합니다.
+- 하위 호환성이 보장되면 어떤 웹 브라우저에서든 자바스크립트 코드를 실행할 수 있습니다.
+- 바벨을 사용하면 브라우저나 Node.js 등에서 지원하지 않는 새롭고 훌륭한 기능을 현재의 환경에서도 실행할 수 있습니다.
+- 바벨 설정을 커스터마이징 하려면, 프로젝트 Root에 .babelrc라는 파일을 생성하면 됩니다.
+- 이 설정 파일을 비워 두면 오류가 발생하기 때문에 최소한 다음 내용을 저장해야 합니다.
+
+### 타입스크립트 지원
+- Next.js는 타입스크립트로 작성되었기 때문에 고품질의 type definiton을 지원합니다.
+- 기본 언어를 타입스크립트로 지정하려면 root에 tscoonfig.json이라는 설정파일 생성하면 됩니다.
+- 그런 다음 `npm run dev` 명령을 실행하면 됩니다.
+
+### 프로젝트의 기본 구조
+- pages/ 디렉토리 안의 모든 js파일은 public 페이지가 됩니다.
+- pages/ 의 Index.jsv 파일을 복사해서, about.js로 이름을 바꾸면, localhost:3000/about으로 접속할 수 있습니다.
+- public/ 디렉토리에는 웹 사이트의 모든 퍼블릭 페이지와 정적 콘텐츠가 있습니다.
+- styles/ 디렉토리에는 앱에서 사용하는 스타일시트 넣습니다.
+- 용도가 정해져 있는 디렉토리는 pages/ 와 public 뿐입니다.
+- 나머지 디렉토리는 필요에 따라서 다른 목적으로 사용하거나 삭제해도 됩니다.
+
+### 프로젝트 생성 방법
+- create-next-app을 이용하여 프로젝트를 생성해봅니다.
+- `npx create-next-app<app-name>` -> `npx create-next-app@latest`
+- Next 13.4 부터 라우터가 /src/pages에서 /src/app로 정식 변경
+- 만일 pages를 사용하고 싶다면, App Router를 No라고 해주면 됩니다.
+- 프로젝트가 생성되면 프로젝트 디렉토리로 이동하여 다음 명령을 실행합니다. npm run dev
+- React처럼 바로 실행되지 않기 때문에 localhost:3000으로 접속하여 확인합니다. "Ctrl + 클릭"
+
+### nvm의 주요 명령어
+- 설치되어 있는 node 리스트 확인
+- Node 설치 : install
+    - nvm install 16.16.0  -> 16.16.0 버전 설치
+    - nvm install latest  -> latest current version 설치
+    - nvm install lts
+- Node 삭제 : uninstall
+- 사용할 Node 버전 선택 : use
+- 사용중인 버전 확인 : current
+- 설치 가능한 node version 목록 확인 : list available
 
 ## 8월 28일
 ### Page Router vs App Router
@@ -91,7 +132,7 @@ Angular, React, Vue 와 같은 프레임워크가 등장하면서 웹 개발 분
 - Nuxt나 Next와는 달리 대기업인 구글에서 만들었습니다.
 - Angular로 개발하는 경우 Angular Universal을 사용하는 것이 대부분입니다.
 
-**2024 기준**
+**2024**
 ![alt text](images/stackover.png)
 
 ### 왜 Next.js 일까?
